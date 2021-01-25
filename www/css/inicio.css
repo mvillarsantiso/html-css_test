@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* AJUSTES GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --tipo-letra: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--tipo-letra)
+}
+
+/* CABECERA */
+
+body header h1{
+    font-size: 5rem;
+}
+
+/* NAVEGACIÓN ENTRE PÁGINAS*/
+
+main nav.navegacion ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+main nav.navegacion ul li {
+    width: 50vw;
+    text-align: center;
+    
+}
+
+main nav.navegacion ul li a {
+    display: block;
+    padding: 1rem;
+    color: black;
+    background-color: lightslategray;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main nav.navegacion ul li a.active {
+    background-color: lightgreen;
+}
+
+main nav.navegacion ul li a:hover:not(.active) {
+    background-color: lightsalmon;
+}
+
+/* ESTRUCTURA PRINCIPAL */
+
+header {
+    padding: 2rem;
+    background-color: aquamarine;
+    text-align: center;
+    font-weight: bold;
+}
+
+main section.wrapper{
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "info     favoritos"
+        "info     horario"
+        "info     video";
+}
+
+/* INFORMACIÓN LATERAL */
+
+main article.informacion {
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: info;
+}
+
+main article.informacion h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+main article.informacion ul.datos {
+    flex-basis: 100%;
+    list-style: none;
+}
+
+main article.informacion ul.datos li img{
+    padding: .5rem;
+    border-radius: 10rem;
+}
+
+main article.informacion ul.datos li {
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+main article.informacion nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+main article.informacion nav ul li {
+    max-width: 50px;
+}
+
+/* FAVORITOS */
+
+main section.favoritos {
+    grid-area: favoritos;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main section.favoritos h2 {
+    align-self: center;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+}
+
+main section.favoritos ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 2rem 0;
+
+}
+
+main section.favoritos ul h3 {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+main section.favoritos ul li {
+    padding: 1rem;
+    margin: 0 0 0 2.5rem;
+    font-size: 1.26rem;
+}
+
+/* HOVER : FAVORITOS */
+
+main section.favoritos ul#peliculas li:nth-child(2):hover {
+    list-style: "📹";
+}
+
+main section.favoritos ul#peliculas li:nth-child(3):hover {
+    list-style: "🎥";
+}
+
+main section.favoritos ul#peliculas li:nth-child(4):hover {
+    list-style: "📽";
+}
+
+main section.favoritos ul#animales li:nth-child(2):hover {
+    list-style: "🐶";
+}
+
+main section.favoritos ul#animales li:nth-child(3):hover {
+    list-style: "🐱";
+}
+
+main section.favoritos ul#animales li:nth-child(4):hover {
+    list-style: "🐹";
+}
+
+main section.favoritos ul#canciones li:nth-child(2):hover {
+    list-style: "🎸";
+}
+
+main section.favoritos ul#canciones li:nth-child(3):hover {
+    list-style: "🎧";
+}
+
+main section.favoritos ul#canciones li:nth-child(4):hover {
+    list-style: "🎷";
+}
+
+/* HORARIO */
+
+main section.horario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: horario;
+}
+
+main section.horario h2 {
+    font-weight: 700;
+    align-self: center;
+}
+
+main section.horario table {
+    font-size: 1.5rem;
+    padding: 1rem 0 1rem 1rem;
+}
+
+main section.horario table thead tr th {
+    padding: 1rem;
+}
+
+main section.horario table thead tr th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+main section.horario table tbody tr td {
+    padding: .5rem;
+}
+
+main section.horario table tr:nth-child(odd) {
+    background-color: lightsteelblue;
+}
+
+main section.horario table tr:nth-child(even) {
+    background-color: lightslategrey;
+}
+
+main section.horario table tbody tr td.hora {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* VIDEO */
+
+main section.video {
+    grid-area: video;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+main section.video h2 {
+    font-weight: 700;
+    align-self: center;
+    padding: 1rem;
+}
+
+main section.video iframe {
+    padding: 1rem;
+}
+
+/* FOOTER */
+
+footer nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: .7rem;
+    list-style: none;
+    background-color: black;
+}
+
+footer nav ul li a {
+    text-decoration: underline;
+    color: white;
+}
+
+footer nav ul li a:visited {
+    text-decoration: underline;
+    color: lightgray;
+}

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* AJUSTES GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --tipo-letra: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--tipo-letra)
+}
+
+/* CABECERA */
+
+body header h1{
+    font-size: 5rem;
+}
+
+/* NAVEGACIÓN ENTRE PÁGINAS*/
+
+main nav.navegacion ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+main nav.navegacion ul li {
+    width: 50vw;
+    text-align: center;
+    
+}
+
+main nav.navegacion ul li a {
+    display: block;
+    padding: 1rem;
+    color: black;
+    background-color: lightslategray;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main nav.navegacion ul li a.active {
+    background-color: lightgreen;
+}
+
+main nav.navegacion ul li a:hover:not(.active) {
+    background-color: lightsalmon;
+}
+
+/* ESTRUCTURA PRINCIPAL */
+
+header {
+    padding: 2rem;
+    background-color: aquamarine;
+    text-align: center;
+    font-weight: bold;
+}
+
+main section.wrapper{
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1;
+    grid-template-areas: 
+        "info     formulario";
+}
+
+/* INFORMACIÓN LATERAL */
+
+main article.informacion {
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: info;
+}
+
+main article.informacion h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+main article.informacion ul.datos {
+    flex-basis: 100%;
+    list-style: none;
+}
+
+main article.informacion ul.datos li img{
+    padding: .5rem;
+    border-radius: 10rem;
+}
+
+main article.informacion ul.datos li {
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+main article.informacion nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+main article.informacion nav ul li {
+    max-width: 50px;
+}
+
+/* FORMULARIO : GENERAL*/
+
+main form {
+    grid-area: formulario;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main form fieldset {
+    padding: 1rem;
+}
+
+main form fieldset legend {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: .5rem;
+}
+
+main form fieldset label {
+    padding: .5rem;
+    text-align: center;
+}
+
+main form fieldset input {
+    padding: 0 .5rem;
+}
+
+/* FORMULARIO : INFORMACIÓN PERSONAL*/
+
+main form fieldset#personal input {
+    width: 80px;
+    height: 25px;
+}
+
+main form fieldset#personal input#color {
+    width: 40px;
+    height: 25px;
+}
+
+main form fieldset#personal input#web {
+    width: 270px;
+}
+
+/* FORMULARIO : FECHA (2 FORMATOS)V*/
+
+main form fieldset#fecha input {
+    width: 100px;
+}
+
+main form fieldset#fecha input#date {
+    width: 155px;
+}
+
+main form fieldset#fecha input#time {
+    width: 90px;
+}
+
+main form fieldset#fecha input#datetime {
+    width: 210px;
+}
+
+main form fieldset#alternativa input#number {
+    width: 75px;
+    height: 25px;
+}
+
+/* FORMULARIO : COMENTARIOS */
+
+main form fieldset#message label {
+    margin-left: 0;
+    text-align: start;
+}
+/* FORMULARIO : BOTÓN */
+
+main section form button {
+    margin-top: 1rem;
+    padding: .5rem;
+    width: 20%;
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+main section form button:hover {
+    background-color: lightgrey;
+}
+
+main section form button:active {
+    background-color: lightgrey;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* FOOTER */
+
+footer nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: .7rem;
+    list-style: none;
+    background-color: black;
+}
+
+footer nav ul li a {
+    text-decoration: underline;
+    color: white;
+}
+
+footer nav ul li a:visited {
+    text-decoration: underline;
+    color: lightgray;
+}
